@@ -708,16 +708,6 @@
   .lead-make .lead-tag { color: var(--ink); }
   .lead-talk ul,
   .lead-make ul { color: var(--ink); }
-  .lead-coda {
-    max-width: 64ch;
-    margin: clamp(20px, 3vw, 36px) 0 clamp(40px, 5vw, 64px);
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(15px, 1.3vw, 18px);
-    line-height: 1.6;
-    color: var(--muted);
-  }
   @media (max-width: 720px) {
     .lead-grid { grid-template-columns: 1fr; }
     .lead-col { border-right: 0; border-bottom: 1px solid var(--rule); }
@@ -1006,12 +996,6 @@
       </div>
     </div>
 
-    <p class="lead-coda reveal" data-i18n="s5.coda">
-      The old leverage hasn&rsquo;t vanished &mdash; it&rsquo;s just no longer the only kind.
-      The new leverage is open to anyone who can put a working thing in front of people.
-      That includes you.
-    </p>
-
     <div class="reasoning reveal">
       <div class="label-row" data-i18n="r6.label">Why everyone leads now</div>
       <div class="collapsible"><div class="body-wrap"><div class="body-inner" data-i18n="r6.body">
@@ -1249,10 +1233,6 @@
           '<li>A thing you actually shipped.</li>'+
           '<li>A demo that runs.</li>'+
           '<li>The people who saw it.</li>',
-        's5.coda':
-          'The old leverage hasn’t disappeared. It just isn’t the only one anymore. '+
-          'The new leverage is open to anyone who can ship. '+
-          'That includes you.',
         'r6.label': 'Why everyone leads now',
         'r6.body':
           '<p>In the previous era, leading meant <em>moving other people</em>. Building anything real required a team, a budget, a room. So leverage was about position: title, headcount, the right meeting. If you didn’t have those, your ideas waited in line.</p>'+
@@ -1385,10 +1365,6 @@
           '<li>一件你真的交付出来的东西。</li>'+
           '<li>一个能跑起来的 demo。</li>'+
           '<li>那些看见过它的人。</li>',
-        's5.coda':
-          '旧杠杆没消失——只是不再是唯一的杠杆。'+
-          '新杠杆，对所有能把一件能用的东西放到别人面前的人开放。'+
-          '这其中也包括你。',
         'r6.label': '为什么人人都是领导者',
         'r6.body':
           '<p>上个时代，"领导"意味着<em>调动别人</em>。要做出任何真东西，都得有团队、有预算、有房间。所以杠杆来自位置：职位、人力、对的会议。没有这些，你的想法就要排队。</p>'+
