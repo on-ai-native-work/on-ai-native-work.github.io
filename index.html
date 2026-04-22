@@ -192,160 +192,50 @@
   }
   .section-title em { font-style: italic; font-weight: 300; color: var(--muted); }
 
-  .cols {
-    max-width: 64ch;
-  }
-  .cols .body p {
-    font-size: clamp(17px, 1.25vw, 19px);
-    line-height: 1.7;
-    margin: 0 0 1.1em;
-  }
-  .cols .body p.drop::first-letter,
-  .cols .body .drop-glyph {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 2.6em;
-    line-height: 0.9;
-    vertical-align: -0.12em;
-    margin-right: 0.04em;
-    color: var(--ink);
-  }
-  .cols .body .pull.pull-sm {
-    font-size: clamp(17px, 1.4vw, 20px);
-    line-height: 1.5;
-  }
-  .cols .body .pull {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(24px, 2.6vw, 34px);
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    margin: 1.4em 0;
-    padding: 0 0 0 1em;
-    border-left: 1px solid var(--ink);
-    color: var(--ink);
-  }
-
-  /* ---------- Triptych (No to-do. To-do is doing. Doing is done.) ---------- */
-  .triptych {
+  /* ---------- Section IV invite mark (faded ?, callback to §I) ---------- */
+  .invite-mark {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: clamp(40px, 5vw, 72px);
-  }
-  .triptych .panel {
-    padding: clamp(32px, 4vw, 56px) clamp(22px, 2.6vw, 36px);
-    border-right: 1px solid var(--rule);
-    min-height: clamp(220px, 28vw, 340px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .triptych .panel:last-child { border-right: 0; }
-  .triptych .panel .idx {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    color: var(--muted);
-  }
-  .triptych .panel .phrase {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(26px, 3.4vw, 44px);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-  }
-  .triptych .panel .phrase em { font-style: italic; font-weight: 300; }
-  .triptych .panel .note {
-    font-family: var(--sans);
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    color: var(--muted);
-    max-width: 28ch;
-  }
-  .triptych .panel.invert {
-    background: var(--ink);
-    color: var(--paper);
-    border-color: var(--ink);
-  }
-  .triptych .panel.invert .idx,
-  .triptych .panel.invert .note { color: rgba(246,244,239,0.6); }
-
-  /* ---------- Big mark (typographic ornament) ---------- */
-  .mark {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    gap: clamp(24px, 4vw, 64px);
-    padding: clamp(60px, 9vw, 120px) 0;
+    gap: clamp(24px, 4vw, 56px);
+    margin: clamp(48px, 7vw, 96px) 0 clamp(32px, 5vw, 64px);
+    padding-top: clamp(24px, 4vw, 48px);
+    border-top: 1px solid var(--rule);
   }
-  .mark .glyphs {
+  .invite-glyph {
     font-family: var(--serif);
+    font-size: clamp(140px, 22vw, 280px);
+    line-height: 0.9;
     font-weight: 300;
-    font-size: clamp(160px, 32vw, 440px);
-    line-height: 0.8;
-    letter-spacing: -0.05em;
     color: var(--ink);
-    user-select: none;
+    opacity: 0.18;
+    letter-spacing: -0.04em;
   }
-  .mark .glyphs .slash {
-    font-style: italic;
-    color: var(--muted-soft);
-    padding: 0 0.04em;
-  }
-  .mark .gloss {
-    max-width: 38ch;
+  .invite-gloss {
     font-family: var(--serif);
-    font-size: clamp(17px, 1.3vw, 20px);
-    line-height: 1.6;
-    color: var(--ink);
+    font-size: clamp(15px, 1.35vw, 18px);
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 38ch;
   }
-  .mark .gloss .label {
+  .invite-gloss .label {
+    display: block;
     font-family: var(--sans);
     font-size: 11px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--muted);
-    display: block;
-    margin-bottom: 14px;
-  }
-
-  /* ---------- Two-up tenets ---------- */
-  .tenets {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border-top: 1px solid var(--rule);
-  }
-  .tenet {
-    padding: clamp(28px, 3.4vw, 44px) clamp(22px, 2.6vw, 36px);
-    border-right: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-  }
-  .tenet:nth-child(2n) { border-right: 0; }
-  .tenet .t-num {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    color: var(--muted);
+    color: var(--ink-soft);
     margin-bottom: 10px;
   }
-  .tenet h3 {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(22px, 2.2vw, 30px);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    margin: 0 0 10px;
+  .invite-gloss code {
+    font-family: var(--mono, ui-monospace, monospace);
+    font-size: 0.92em;
+    color: var(--ink);
   }
-  .tenet h3 em { font-style: italic; font-weight: 300; }
-  .tenet p {
-    margin: 0;
-    font-family: var(--serif);
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--ink-soft);
-    max-width: 46ch;
+  @media (max-width: 720px) {
+    .invite-mark { grid-template-columns: 1fr; text-align: center; gap: 12px; }
+    .invite-gloss { max-width: none; }
+    .invite-glyph { font-size: clamp(160px, 48vw, 240px); }
   }
 
   /* ---------- Coda ---------- */
@@ -819,6 +709,15 @@
       </div>
     </div>
 
+    <div class="invite-mark reveal" aria-hidden="true">
+      <div class="invite-glyph">?</div>
+      <div class="invite-gloss" data-i18n="s4.invite.gloss">
+        <span class="label">Same mark, new meaning.</span>
+        In §I, <code>?</code> was a shortcut you owed someone.
+        Here, it&rsquo;s an invitation &mdash; the territory still open to you.
+      </div>
+    </div>
+
     <div class="reasoning reveal">
       <div class="label-row" data-i18n="r5.label">Why the unknown is an invitation</div>
       <div class="collapsible"><div class="body-wrap"><div class="body-inner" data-i18n="r5.body">
@@ -832,6 +731,47 @@
           <li><strong>Send it out</strong> &mdash; what you saw is what others want to see.</li>
         </ul>
         <blockquote>The unknown is not a threat. It is a path no one has walked yet.</blockquote>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule" /></div>
+
+<!-- ============ §V ============ -->
+<section class="article">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="s5.title">
+        Lead with <em>artifacts.</em>
+      </h2>
+    </div>
+
+    <div class="tenets tenets--soft reveal">
+      <div class="tenet">
+        <div class="t-num" data-i18n="s5.col1.label">OLD</div>
+        <h3 data-i18n="s5.col1.title">Align <em>minds.</em></h3>
+        <p data-i18n="s5.col1.body">Titles, meetings, an audience. The boundary of who you could move was the boundary of who sat in your room.</p>
+      </div>
+      <div class="tenet">
+        <div class="t-num" data-i18n="s5.col2.label">NEW</div>
+        <h3 data-i18n="s5.col2.title">Align <em>artifacts.</em></h3>
+        <p data-i18n="s5.col2.body">A doc, a prototype, a PR, a small tool. Anyone who reads it can be empowered by it. The boundary is wider than you think.</p>
+      </div>
+    </div>
+
+    <div class="reasoning reveal">
+      <div class="label-row" data-i18n="r6.label">Why everyone leads now</div>
+      <div class="collapsible"><div class="body-wrap"><div class="body-inner" data-i18n="r6.body">
+        <p>Leadership used to require a title, a meeting, an audience. You had to convince people to align before anything moved. The boundary of who you could move was the boundary of who would sit in your room.</p>
+        <p>In the AI native era, that boundary is much wider than you think. An artifact &mdash; a doc, a prototype, a pull request, a small tool &mdash; speaks for itself. Anyone who reads it can be empowered by it. You don&rsquo;t need permission, headcount, or alignment. You only need to make it.</p>
+        <h4>The shift</h4>
+        <ul>
+          <li><strong>Don&rsquo;t align minds</strong> &mdash; that&rsquo;s the old cost.</li>
+          <li><strong>Make the artifact</strong> &mdash; let it carry the thought.</li>
+          <li><strong>Let it travel</strong> &mdash; the right people will find it.</li>
+        </ul>
+        <blockquote>You are a leader inside a wider boundary than you think. Show, don&rsquo;t align.</blockquote>
       </div></div></div>
     </div>
   </div>
@@ -946,13 +886,13 @@
       en: {
         'masthead': 'How to Work in the AI Native Era',
         'hero.title': 'No <span class="punct">?</span><span class="amp">/</span><span class="punct">@</span><br/>in <span class="it">AI Native</span><br/>generation.',
-        'hero.lede': 'Start with your agent. It\u2019s already thinking.',
+        'hero.lede': 'Start with your agent. It’s already thinking.',
 
         'r1.label': 'Why this piece exists',
         'r1.body':
-          '<p>The cost of <em>collecting context and forming a judgment</em> used to be high \u2014 so we asked, we @-ed, we synced.</p>'+
-          '<p>In the AI native era, an agent can read the repo, the doc, the thread, the spec, and hand you back a synthesized answer in seconds. The bottleneck is no longer information \u2014 it\u2019s <em>your willingness to do the work of thinking before you interrupt someone else.</em></p>'+
-          '<p>This piece is not anti-question and not anti-collaboration. It is against an older mode of working. What it advocates: before you take another human\u2019s attention, spend the agent\u2019s first.</p>'+
+          '<p>The cost of <em>collecting context and forming a judgment</em> used to be high — so we asked, we @-ed, we synced.</p>'+
+          '<p>In the AI native era, an agent can read the repo, the doc, the thread, the spec, and hand you back a synthesized answer in seconds. The bottleneck is no longer information — it’s <em>your willingness to do the work of thinking before you interrupt someone else.</em></p>'+
+          '<p>This piece is not anti-question and not anti-collaboration. It is against an older mode of working. What it advocates: before you take another human’s attention, spend the agent’s first.</p>'+
           '<blockquote>The questions worth asking a human are the ones an agent cannot answer: decisions, permissions, taste.</blockquote>',
 
         'mark.gloss':
@@ -961,179 +901,227 @@
 
         'r2.label': 'What <code>?</code> and <code>@</code> really mean',
         'r2.body':
-          '<p>Read literally, \u201Cno <code>?</code>, no <code>@</code>\u201D sounds like \u201Cdon\u2019t ask, don\u2019t talk to people.\u201D That\u2019s not it.</p>'+
-          '<p>The two characters stand for a specific, discouraged pattern \u2014 <em>the zero-context interrupt</em>:</p>'+
+          '<p>Read literally, “no <code>?</code>, no <code>@</code>” sounds like “don’t ask, don’t talk to people.” That’s not it.</p>'+
+          '<p>The two characters stand for a specific, discouraged pattern — <em>the zero-context interrupt</em>:</p>'+
           '<ul>'+
-            '<li><code>?</code> is not the question mark. It\u2019s you being too lazy to open an agent.</li>'+
-            '<li><code>@</code> is not the at sign. It\u2019s you being too lazy to read the actual context.</li>'+
+            '<li><code>?</code> is not the question mark. It’s you being too lazy to open an agent.</li>'+
+            '<li><code>@</code> is not the at sign. It’s you being too lazy to read the actual context.</li>'+
           '</ul>'+
-          '<p>Both are bids for someone else\u2019s attention you haven\u2019t earned. In a pre-AI world that was forgivable \u2014 looking things up was expensive. In an AI native world, the agent is the cheap, infinite first responder. Sending the unknown to the agent first is no longer a courtesy; it is <strong>the new baseline of competence.</strong></p>'+
+          '<p>Both are bids for someone else’s attention you haven’t earned. In a pre-AI world that was forgivable — looking things up was expensive. In an AI native world, the agent is the cheap, infinite first responder. Sending the unknown to the agent first is no longer a courtesy; it is <strong>the new baseline of competence.</strong></p>'+
           '<h4>When you should still @ a human</h4>'+
           '<ul>'+
-            '<li><strong>Decisions</strong> \u2014 when a tradeoff is irreversible and someone owns it.</li>'+
-            '<li><strong>Permissions</strong> \u2014 when the answer is outside the agent\u2019s reach.</li>'+
-            '<li><strong>Taste</strong> \u2014 when the artifact\u2019s shape needs an anchor, and only a person can be one.</li>'+
+            '<li><strong>Decisions</strong> — when a tradeoff is irreversible and someone owns it.</li>'+
+            '<li><strong>Permissions</strong> — when the answer is outside the agent’s reach.</li>'+
+            '<li><strong>Taste</strong> — when the artifact’s shape needs an anchor, and only a person can be one.</li>'+
           '</ul>'+
           '<blockquote>Everything else: ask the agent. Ask it a few more times.</blockquote>',
 
         's2.title': 'No to-do. <em>To-do is doing. Doing is done.</em>',
         's2.pull': 'The only real list is the one you never write down.',
         's2.p1.phrase': 'No <em>to-do.</em>',
-        's2.p1.note': 'Think it \u2014 it\u2019s already a prompt.',
+        's2.p1.note': 'Think it — it’s already a prompt.',
         's2.p2.phrase': 'To-do <em>is</em> doing.',
-        's2.p2.note': 'Prompt it, and it\u2019s running.',
+        's2.p2.note': 'Prompt it, and it’s running.',
         's2.p3.phrase': 'Doing <em>is</em> done.',
-        's2.p3.note': 'Look up, and it\u2019s done.',
+        's2.p3.note': 'Look up, and it’s done.',
 
         'r3.label': 'Why the to-do list is dead',
         'r3.body':
-          '<p>The to-do list was a coping mechanism for a specific bottleneck: <em>the gap between intention and execution.</em> You wrote it down because you couldn\u2019t act on it yet \u2014 context to gather, code to write, people to wait on. The list was the holding pen.</p>'+
+          '<p>The to-do list was a coping mechanism for a specific bottleneck: <em>the gap between intention and execution.</em> You wrote it down because you couldn’t act on it yet — context to gather, code to write, people to wait on. The list was the holding pen.</p>'+
           '<p>Agents collapse that gap. The moment you can articulate the task clearly enough to write it down, you can articulate it clearly enough to delegate it. The act of <em>capturing</em> and the act of <em>starting</em> are now the same act.</p>'+
           '<h4>The new loop</h4>'+
           '<ul>'+
-            '<li><strong>Think it</strong> \u2014 this is the prompt.</li>'+
-            '<li><strong>Hand it</strong> \u2014 the agent begins before you\u2019ve finished phrasing it.</li>'+
-            '<li><strong>Look up</strong> \u2014 your job is review and judgment, not tracking.</li>'+
+            '<li><strong>Think it</strong> — this is the prompt.</li>'+
+            '<li><strong>Hand it</strong> — the agent begins before you’ve finished phrasing it.</li>'+
+            '<li><strong>Look up</strong> — your job is review and judgment, not tracking.</li>'+
           '</ul>'+
-          '<p>The risk this introduces is real: speed without taste produces fast garbage. So the discipline is not \u201Cship faster\u201D \u2014 it is <em>raise your bar for what counts as done.</em></p>'+
+          '<p>The risk this introduces is real: speed without taste produces fast garbage. So the discipline is not “ship faster” — it is <em>raise your bar for what counts as done.</em></p>'+
           '<p>When generation becomes cheap, judgment and taste become expensive. Cultivate them.</p>',
 
         's3.title': 'No teamwork is <em>the best teamwork.</em>',
-        's3.drop': 'Meetings, threads, hand-offs \u2014 all of it is overhead. The agent doesn\u2019t need any of it.',
+        's3.drop': 'Meetings, threads, hand-offs — all of it is overhead. The agent doesn’t need any of it.',
         's3.pull': 'Before you talk to a human, listen to what the agent has to say.',
 
-        'r4.label': 'Why \u201Cno teamwork\u201D is not anti-team',
+        'r4.label': 'Why “no teamwork” is not anti-team',
         'r4.body':
-          '<p>\u201CThe best teamwork is no teamwork\u201D sounds like a solo-hacker fantasy. It isn\u2019t.</p>'+
-          '<p>Most teamwork is not collaboration \u2014 it is <em>waste</em>: status meetings, FYI, hand-offs, \u201Cquick syncs\u201D\u2026 These exist because some people are still working in the previous era. This overhead is the price paid when people from different eras have to share the same model of the world.</p>'+
+          '<p>“The best teamwork is no teamwork” sounds like a solo-hacker fantasy. It isn’t.</p>'+
+          '<p>Most teamwork is not collaboration — it is <em>waste</em>: status meetings, FYI, hand-offs, “quick syncs”… These exist because some people are still working in the previous era. This overhead is the price paid when people from different eras have to share the same model of the world.</p>'+
           '<p>In the AI native era, this shared model is equal and egalitarian. Everyone should read what the agent produced carefully first, then consider whether to manufacture the cost of communication and collaboration.</p>'+
           '<h4>What survives</h4>'+
           '<ul>'+
-            '<li><strong>Decisions made together</strong> \u2014 because the consequences are shared.</li>'+
-            '<li><strong>Taste collided together</strong> \u2014 because there is only one outlet for taste.</li>'+
-            '<li><strong>Trust built together</strong> \u2014 because no agent can vouch for you.</li>'+
+            '<li><strong>Decisions made together</strong> — because the consequences are shared.</li>'+
+            '<li><strong>Taste collided together</strong> — because there is only one outlet for taste.</li>'+
+            '<li><strong>Trust built together</strong> — because no agent can vouch for you.</li>'+
           '</ul>'+
-          '<blockquote>What dies: the meeting that exists to confirm what everyone already knew. The thread that exists because no one wanted to read the doc. The hand-off that exists because the work wasn\u2019t really finished.</blockquote>',
+          '<blockquote>What dies: the meeting that exists to confirm what everyone already knew. The thread that exists because no one wanted to read the doc. The hand-off that exists because the work wasn’t really finished.</blockquote>',
 
         's4.title': 'Unknowns are <em>invitations.</em>',
-        's4.drop': 'In the last era, the unknown made you anxious. In this one, it should make you excited \u2014 because it marks the territory AI can walk into with you.',
-        's4.pull': 'What you haven\u2019t seen is yours to explore.',
+        's4.drop': 'In the last era, the unknown made you anxious. In this one, it should make you excited — because it marks the territory AI can walk into with you.',
+        's4.pull': 'What you haven’t seen is yours to explore.',
+        's4.invite.gloss':
+          '<span class="label">Same mark, new meaning.</span>'+
+          'In §I, <code>?</code> was a shortcut you owed someone. '+
+          'Here, it’s an invitation — the territory still open to you.',
 
         'r5.label': 'Why the unknown is an invitation',
         'r5.body':
-          '<p>In the previous era, the unknown made you anxious. Walking into it was expensive \u2014 you had to gather information alone, try things alone, and carry the risk of not getting through alone. So you detoured. You asked. You deferred.</p>'+
-          '<p>In the AI native era, the cost of <em>exploring</em> has collapsed. AI can read the structure with you, break the problem down with you, try things fast. The unknown is no longer a black box \u2014 it is a region you and the agent can illuminate together. <em>Difficulty</em> is just the shape unknowns take in execution: when you haven\u2019t arrived yet, hard feels like a wall; once you\u2019re on the path, hard is just terrain.</p>'+
-          '<p>So when you find something no one has made work, the signal has inverted. That\u2019s not a warning \u2014 it\u2019s an invitation. A place AI can help you reach, where others haven\u2019t reached yet, is your opening. Share what you see; others are waiting for that map.</p>'+
+          '<p>In the previous era, the unknown made you anxious. Walking into it was expensive — you had to gather information alone, try things alone, and carry the risk of not getting through alone. So you detoured. You asked. You deferred.</p>'+
+          '<p>In the AI native era, the cost of <em>exploring</em> has collapsed. AI can read the structure with you, break the problem down with you, try things fast. The unknown is no longer a black box — it is a region you and the agent can illuminate together. <em>Difficulty</em> is just the shape unknowns take in execution: when you haven’t arrived yet, hard feels like a wall; once you’re on the path, hard is just terrain.</p>'+
+          '<p>So when you find something no one has made work, the signal has inverted. That’s not a warning — it’s an invitation. A place AI can help you reach, where others haven’t reached yet, is your opening. Share what you see; others are waiting for that map.</p>'+
           '<h4>The new reflex</h4>'+
           '<ul>'+
-            '<li><strong>See the unknown</strong> \u2014 that is the opportunity.</li>'+
-            '<li><strong>Walk in</strong> \u2014 the agent walks with you.</li>'+
-            '<li><strong>Send it out</strong> \u2014 what you saw is what others want to see.</li>'+
+            '<li><strong>See the unknown</strong> — that is the opportunity.</li>'+
+            '<li><strong>Walk in</strong> — the agent walks with you.</li>'+
+            '<li><strong>Send it out</strong> — what you saw is what others want to see.</li>'+
           '</ul>'+
           '<blockquote>The unknown is not a threat. It is a path no one has walked yet.</blockquote>',
 
+        's5.title': 'Lead with <em>artifacts.</em>',
+        's5.col1.label': 'OLD',
+        's5.col1.title': 'Align <em>minds.</em>',
+        's5.col1.body': 'Titles, meetings, an audience. The boundary of who you could move was the boundary of who sat in your room.',
+        's5.col2.label': 'NEW',
+        's5.col2.title': 'Align <em>artifacts.</em>',
+        's5.col2.body': 'A doc, a prototype, a PR, a small tool. Anyone who reads it can be empowered by it. The boundary is wider than you think.',
+
+        'r6.label': 'Why everyone leads now',
+        'r6.body':
+          '<p>Leadership used to require a title, a meeting, an audience. You had to convince people to align before anything moved. The boundary of who you could move was the boundary of who would sit in your room.</p>'+
+          '<p>In the AI native era, that boundary is much wider than you think. An artifact — a doc, a prototype, a pull request, a small tool — speaks for itself. Anyone who reads it can be empowered by it. You don’t need permission, headcount, or alignment. You only need to make it.</p>'+
+          '<h4>The shift</h4>'+
+          '<ul>'+
+            '<li><strong>Don’t just talk ideas</strong> — that’s the old way.</li>'+
+            '<li><strong>Make the artifact</strong> — let it carry the thought.</li>'+
+            '<li><strong>Let it travel</strong> — the right people will find it.</li>'+
+          '</ul>'+
+          '<blockquote>You are a leader inside a wider boundary than you think. Show, don’t align.</blockquote>',
+
         'coda.line1': 'Generation,<br>to agent.',
         'coda.line2': '<em>Decisions</em>, <em>permission</em>, <em>taste</em>,<br>to you.',
-        'coda.coda': 'Attention,<br>to what\u2019s still precious.',
+        'coda.coda': 'Attention,<br>to what’s still precious.',
 
         'foot.left': 'A few words from Bojun.',
-        'foot.right': '\u00A9 \u00A0Use freely.'
+        'foot.right': '©  Use freely.'
       },
       zh: {
-        'masthead': '\u5982\u4F55\u5728 AI Native \u65F6\u4EE3\u5DE5\u4F5C',
-        'hero.title': '\u5728 <span class="it">AI Native</span> \u65F6\u4EE3\uFF0C<br/>\u4E0D\u8981 <span class="punct">?</span><span class="amp">/</span><span class="punct">@</span>\u3002',
-        'hero.lede': '\u4ECE\u4F60\u7684 Agent \u5F00\u59CB\u2014\u2014\u5B83\u5DF2\u7ECF\u5728\u601D\u8003\u3002',
+        'masthead': '如何在 AI Native 时代工作',
+        'hero.title': '在 <span class="it">AI Native</span> 时代，<br/>不要 <span class="punct">?</span><span class="amp">/</span><span class="punct">@</span>。',
+        'hero.lede': '从你的 Agent 开始——它已经在思考。',
 
-        'r1.label': '\u4E3A\u4EC0\u4E48\u5199\u8FD9\u7BC7',
+        'r1.label': '为什么写这篇',
         'r1.body':
-          '<p>\u8FC7\u53BB\uFF0C\u201C\u6536\u96C6\u4E0A\u4E0B\u6587\u3001\u5F62\u6210\u5224\u65AD\u201D\u7684\u6210\u672C\u5F88\u9AD8\u2014\u2014\u6240\u4EE5\u6211\u4EEC\u95EE\u3001\u6211\u4EEC @\u3001\u6211\u4EEC\u5F00\u4F1A\u3002</p>'+
-          '<p>\u5728 AI native \u65F6\u4EE3\uFF0CAgent \u53EF\u4EE5\u98DE\u5FEB\u5F97\u8BFB\u5B8C\u4EE3\u7801\uFF0C\u6587\u6863\uFF0C\u8BA8\u8BBA\uFF0C\u5E76\u5448\u73B0\u7ED3\u679C\u7ED9\u4F60\u3002\u74F6\u9888\u4E0D\u518D\u662F\u6536\u96C6\u4FE1\u606F\u7684\u96BE\u5EA6\u2014\u2014<em>\u4F60\u662F\u5426\u613F\u610F\u5728\u6253\u65AD\u522B\u4EBA\u4E4B\u524D\uFF0C\u81EA\u5DF1\u5148\u628A\u8BE5\u60F3\u7684\u4E8B\u60F3\u5B8C\u3002</em></p>'+
-          '<p>\u8FD9\u91CC\u4E0D\u53CD\u5BF9\u63D0\u95EE\uFF0C\u4E5F\u4E0D\u53CD\u5BF9\u534F\u4F5C\u3002\u8FD9\u91CC\u53CD\u5BF9\u7684\u662F\u4E0A\u4E2A\u65F6\u4EE3\u7684\u6A21\u5F0F\u3002\u6240\u63D0\u5021\u7684\u662F\uFF1A\u5728\u4F60\u7D22\u53D6\u522B\u4EBA\u7684\u6CE8\u610F\u529B\u4E4B\u524D\uFF0C\u5148\u82B1\u6389 Agent \u7684\u3002</p>'+
-          '<blockquote>\u503C\u5F97\u95EE\u4EBA\u7684\u95EE\u9898\uFF0C\u662F Agent \u7B54\u4E0D\u4E86\u7684\u90A3\u51E0\u7C7B\uFF1A\u51B3\u7B56\u3001\u6743\u9650\u3001\u54C1\u5473\u3002</blockquote>',
+          '<p>过去，“收集上下文、形成判断”的成本很高——所以我们问、我们 @、我们开会。</p>'+
+          '<p>在 AI native 时代，Agent 可以飞快得读完代码，文档，讨论，并呈现结果给你。瓶颈不再是收集信息的难度——<em>你是否愿意在打断别人之前，自己先把该想的事想完。</em></p>'+
+          '<p>这里不反对提问，也不反对协作。这里反对的是上个时代的模式。所提倡的是：在你索取别人的注意力之前，先花掉 Agent 的。</p>'+
+          '<blockquote>值得问人的问题，是 Agent 答不了的那几类：决策、权限、品味。</blockquote>',
 
         'mark.gloss':
-          '<span class="label">\u4E24\u4E2A\u5B57\u7B26\uFF0C\u4E00\u6761\u89C4\u5219\u3002</span> '+
-          '\u4F60\u67E5\u8FC7\u4E86\u5417\uFF1F\u4F60\u60F3\u660E\u767D\u4E86\u5417\uFF1F\u8BA9\u4F60\u7684 Agent \u5E2E\u4F60\u770B\u770B\u3002',
+          '<span class="label">两个字符，一条规则。</span> '+
+          '你查过了吗？你想明白了吗？让你的 Agent 帮你看看。',
 
-        'r2.label': '<code>?</code> \u548C <code>@</code> \u5230\u5E95\u6307\u4EC0\u4E48',
+        'r2.label': '<code>?</code> 和 <code>@</code> 到底指什么',
         'r2.body':
-          '<p>\u5B57\u9762\u8BFB\uFF0C\u201C\u4E0D\u8981 <code>?</code>\u3001\u4E0D\u8981 <code>@</code>\u201D\u542C\u8D77\u6765\u50CF\u201C\u522B\u63D0\u95EE\u3001\u522B\u627E\u4EBA\u8BF4\u8BDD\u201D\u3002\u4E0D\u662F\u8FD9\u4E2A\u610F\u601D\u3002</p>'+
-          '<p>\u8FD9\u4E24\u4E2A\u5B57\u7B26\u4EE3\u8868\u7684\u662F\u4E00\u79CD\u5177\u4F53\u7684\uFF0C\u4E0D\u88AB\u63D0\u5021\u7684\u6A21\u5F0F\u2014\u2014<em>\u96F6\u4E0A\u4E0B\u6587\u7684\u6253\u65AD</em>\uFF1A</p>'+
+          '<p>字面读，“不要 <code>?</code>、不要 <code>@</code>”听起来像“别提问、别找人说话”。不是这个意思。</p>'+
+          '<p>这两个字符代表的是一种具体的，不被提倡的模式——<em>零上下文的打断</em>：</p>'+
           '<ul>'+
-            '<li><code>?</code> \u4E0D\u662F\u95EE\u53F7\u3002\u662F\u4F60\u61D2\u5F97\u5F00\u4E00\u4E2A Agent\u3002</li>'+
-            '<li><code>@</code> \u4E0D\u662F at\u3002\u662F\u4F60\u61D2\u5F97\u53BB\u8BFB\u5B8C\u771F\u6B63\u7684\u4E0A\u4E0B\u6587\u3002</li>'+
+            '<li><code>?</code> 不是问号。是你懒得开一个 Agent。</li>'+
+            '<li><code>@</code> 不是 at。是你懒得去读完真正的上下文。</li>'+
           '</ul>'+
-          '<p>\u4E24\u8005\u90FD\u662F\u5728\u65E0\u5DEE\u522B\u7D22\u53D6\u5BF9\u65B9\u7684\u6CE8\u610F\u529B\u3002AI \u65F6\u4EE3\u4E4B\u524D\uFF0C\u8FD9\u662F\u60C5\u6709\u53EF\u539F\u7684\u2014\u2014\u6536\u96C6\u4FE1\u606F\u7684\u6210\u672C\u5F88\u9AD8\u3002AI native \u65F6\u4EE3\uFF0CAgent \u662F\u4FBF\u5B9C\u7684\u3001\u65E0\u9650\u7684\u7B2C\u4E00\u54CD\u5E94\u4EBA\u3002\u628A\u672A\u77E5\u5148\u4E22\u7ED9 Agent\uFF0C\u4E0D\u518D\u662F\u4E00\u79CD\u793C\u8C8C\uFF0C\u800C\u662F<strong>\u65B0\u7684\u80FD\u529B\u57FA\u51C6\u7EBF</strong>\u3002</p>'+
-          '<h4>\u4EC0\u4E48\u65F6\u5019\u4ECD\u7136\u8BE5 @ \u4EBA</h4>'+
+          '<p>两者都是在无差别索取对方的注意力。AI 时代之前，这是情有可原的——收集信息的成本很高。AI native 时代，Agent 是便宜的、无限的第一响应人。把未知先丢给 Agent，不再是一种礼貌，而是<strong>新的能力基准线</strong>。</p>'+
+          '<h4>什么时候仍然该 @ 人</h4>'+
           '<ul>'+
-            '<li><strong>\u51B3\u7B56</strong> \u2014\u2014 \u6743\u8861\u4E0D\u53EF\u9006\u3001\u6709\u4EBA\u8981\u4E3A\u5B83\u8D1F\u8D23\u65F6\u3002</li>'+
-            '<li><strong>\u6743\u9650</strong> \u2014\u2014 \u7B54\u6848\u4E0D\u5728 Agent \u7684\u89E6\u8FBE\u8303\u56F4\u5185\u65F6\u3002</li>'+
-            '<li><strong>\u54C1\u5473</strong> \u2014\u2014 \u4EA7\u7269\u7684\u6837\u8C8C\u9700\u8981\u951A\u5B9A\uFF0C\u800C\u951A\u53EA\u80FD\u662F\u4EBA\u65F6\u3002</li>'+
+            '<li><strong>决策</strong> —— 权衡不可逆、有人要为它负责时。</li>'+
+            '<li><strong>权限</strong> —— 答案不在 Agent 的触达范围内时。</li>'+
+            '<li><strong>品味</strong> —— 产物的样貌需要锚定，而锚只能是人时。</li>'+
           '</ul>'+
-          '<blockquote>\u9664\u6B64\u4E4B\u5916\uFF1A\u53BB\u95EE Agent\uFF0C\u591A\u95EE\u51E0\u6B21\u3002</blockquote>',
+          '<blockquote>除此之外：去问 Agent，多问几次。</blockquote>',
 
-        's2.title': '\u4E0D\u8981 to-do\u3002<em>To-do \u5C31\u662F doing\u3002Doing \u5C31\u662F done\u3002</em>',
-        's2.pull': '\u552F\u4E00\u771F\u6B63\u7684 to-do list\uFF0C\u662F\u4F60\u8111\u6D77\u4E2D\u4ECE\u672A\u843D\u7B14\u7684\u90A3\u5F20\u3002',
-        's2.p1.phrase': '\u4E0D\u8981 <em>to-do\u3002</em>',
-        's2.p1.note': '\u60F3\u5230\uFF0C\u5B83\u5C31\u662F prompt\u3002',
-        's2.p2.phrase': 'To-do <em>\u5373</em> doing\u3002',
-        's2.p2.note': 'Prompt \u51FA\u53BB\uFF0C\u5B83\u5DF2\u5728\u8DD1\u3002',
-        's2.p3.phrase': 'Doing <em>\u5373</em> done\u3002',
-        's2.p3.note': '\u62AC\u5934\u770B\uFF0C\u5DF2\u7ECF\u5B8C\u6210\u4E86\u3002',
+        's2.title': '不要 to-do。<em>To-do 就是 doing。Doing 就是 done。</em>',
+        's2.pull': '唯一真正的 to-do list，是你脑海中从未落笔的那张。',
+        's2.p1.phrase': '不要 <em>to-do。</em>',
+        's2.p1.note': '想到，它就是 prompt。',
+        's2.p2.phrase': 'To-do <em>即</em> doing。',
+        's2.p2.note': 'Prompt 出去，它已在跑。',
+        's2.p3.phrase': 'Doing <em>即</em> done。',
+        's2.p3.note': '抬头看，已经完成了。',
 
-        'r3.label': '\u4E3A\u4EC0\u4E48 to-do list \u5DF2\u6B7B',
+        'r3.label': '为什么 to-do list 已死',
         'r3.body':
-          '<p>To-do list \u662F\u4E00\u79CD\u5E94\u5BF9\u7279\u5B9A\u74F6\u9888\u7684\u6743\u5B9C\u4E4B\u8BA1\uFF1A<em>\u610F\u56FE\u548C\u6267\u884C\u4E4B\u95F4\u7684\u9E3F\u6C9F</em>\u3002\u4F60\u628A\u5B83\u5199\u4E0B\u6765\uFF0C\u662F\u56E0\u4E3A\u4F60\u5F53\u4E0B\u8FD8\u505A\u4E0D\u4E86\u2014\u2014\u4E0A\u4E0B\u6587\u8981\u6536\u96C6\u3001\u4EE3\u7801\u8981\u5199\u3001\u4EBA\u8981\u7B49\u3002\u90A3\u5F20\u6E05\u5355\u662F\u201C\u6682\u5B58\u533A\u201D\u3002</p>'+
-          '<p>Agent \u628A\u8FD9\u9053\u9E3F\u6C9F\u586B\u5E73\u4E86\u3002\u5F53\u4F60\u80FD\u628A\u4E00\u4EF6\u4E8B\u8BF4\u6E05\u695A\u5230\u53EF\u4EE5\u5199\u4E0B\u6765\uFF0C\u4F60\u5C31\u5DF2\u7ECF\u80FD\u8BF4\u6E05\u695A\u5230\u53EF\u4EE5\u6258\u4ED8\u51FA\u53BB\u3002<em>\u6355\u6349</em>\u548C<em>\u542F\u52A8</em>\uFF0C\u73B0\u5728\u662F\u540C\u4E00\u4E2A\u52A8\u4F5C\u3002</p>'+
-          '<h4>\u65B0\u7684\u5FAA\u73AF</h4>'+
+          '<p>To-do list 是一种应对特定瓶颈的权宜之计：<em>意图和执行之间的鸿沟</em>。你把它写下来，是因为你当下还做不了——上下文要收集、代码要写、人要等。那张清单是“暂存区”。</p>'+
+          '<p>Agent 把这道鸿沟填平了。当你能把一件事说清楚到可以写下来，你就已经能说清楚到可以托付出去。<em>捕捉</em>和<em>启动</em>，现在是同一个动作。</p>'+
+          '<h4>新的循环</h4>'+
           '<ul>'+
-            '<li><strong>\u60F3\u5230</strong> \u2014\u2014 \u8FD9\u5C31\u662F prompt\u3002</li>'+
-            '<li><strong>\u4EA4\u51FA\u53BB</strong> \u2014\u2014 \u4F60\u8FD8\u6CA1\u8BF4\u5B8C\uFF0CAgent \u5DF2\u7ECF\u5F00\u59CB\u3002</li>'+
-            '<li><strong>\u62AC\u5934\u770B</strong> \u2014\u2014 \u4F60\u7684\u5DE5\u4F5C\u662F\u5BA1\u9605\u548C\u5224\u65AD\uFF0C\u4E0D\u662F\u8FFD\u8E2A\u3002</li>'+
+            '<li><strong>想到</strong> —— 这就是 prompt。</li>'+
+            '<li><strong>交出去</strong> —— 你还没说完，Agent 已经开始。</li>'+
+            '<li><strong>抬头看</strong> —— 你的工作是审阅和判断，不是追踪。</li>'+
           '</ul>'+
-          '<p>\u8FD9\u4F1A\u5F15\u5165\u4E00\u4E2A\u771F\u5B9E\u7684\u98CE\u9669\uFF1A\u6709\u901F\u5EA6\u6CA1\u54C1\u5473\uFF0C\u4EA7\u51FA\u7684\u662F\u5FEB\u901F\u5783\u573E\u3002\u6240\u4EE5\u7EAA\u5F8B\u4E0D\u662F\u201Cship \u66F4\u5FEB\u201D\u2014\u2014\u800C\u662F<em>\u62AC\u9AD8\u4F60\u5BF9\u201C\u5B8C\u6210\u201D\u7684\u6807\u51C6</em>\u3002</p>'+
-          '<p>\u5F53\u751F\u4EA7\u529B\u53D8\u5F97\u5EC9\u4EF7\uFF0C\u5224\u65AD\u529B\u548C\u54C1\u5473\u5C31\u663E\u5F97\u6602\u8D35\u3002\u57F9\u517B\u8FD9\u4E9B\u80FD\u529B\u3002</p>',
+          '<p>这会引入一个真实的风险：有速度没品味，产出的是快速垃圾。所以纪律不是“ship 更快”——而是<em>抬高你对“完成”的标准</em>。</p>'+
+          '<p>当生产力变得廉价，判断力和品味就显得昂贵。培养这些能力。</p>',
 
-        's3.title': '\u6CA1\u6709\u534F\u4F5C\u624D\u662F <em>\u6700\u597D\u7684\u534F\u4F5C\u3002</em>',
-        's3.drop': '\u5F00\u4F1A\uFF0C\u8BA8\u8BBA\uFF0C\u4EA4\u63A5 \u2014\u2014 \u5168\u90FD\u662F\u9AD8\u6602\u7684\u751F\u4EA7\u529B\u6210\u672C\u3002Agent \u4E0D\u9700\u8981\u5B83\u4EEC\u3002',
-        's3.pull': '\u4E0E\u4EBA\u804A\uFF0C\u4E0D\u5982\u5148\u542C\u542C Agent \u600E\u4E48\u8BF4\u3002',
+        's3.title': '没有协作才是 <em>最好的协作。</em>',
+        's3.drop': '开会，讨论，交接 —— 全都是高昂的生产力成本。Agent 不需要它们。',
+        's3.pull': '与人聊，不如先听听 Agent 怎么说。',
 
-        'r4.label': '\u201CNo teamwork\u201D \u4E0D\u662F\u53CD\u56E2\u961F',
+        'r4.label': '“No teamwork” 不是反团队',
         'r4.body':
-          '<p>\u201C\u6CA1\u6709\u534F\u4F5C\u624D\u662F\u6700\u597D\u7684\u534F\u4F5C\u201D\u542C\u8D77\u6765\u50CF\u5355\u6253\u72EC\u6597\u7684\u5E7B\u60F3\u3002\u5B9E\u5219\u4E0D\u662F\u3002</p>'+
-          '<p>\u5927\u591A\u6570\u6240\u8C13\u7684\u56E2\u961F\u534F\u4F5C\uFF0C\u5176\u5B9E\u4E0D\u662F\u534F\u4F5C\uFF0C\u800C\u662F<em>\u6D6A\u8D39</em>\u2014\u2014\u5468\u4F1A\uFF0CFYI\uFF0C\u4EA4\u63A5\u3001\u201C\u5FEB\u901F\u540C\u6B65\u4E00\u4E0B\u201D\u2026\u2026\u8FD9\u4E9B\u4E1C\u897F\u5B58\u5728\uFF0C\u662F\u56E0\u4E3A\u6709\u4E9B\u4EBA\u8FD8\u5DE5\u4F5C\u5728\u4E0A\u4E00\u4E2A\u65F6\u4EE3\u3002\u8FD9\u7B14\u5F00\u9500\uFF0C\u662F\u4E0D\u540C\u65F6\u4EE3\u7684\u4EBA\u4EEC\u8981\u5171\u4EAB\u540C\u4E00\u4E2A\u4E16\u754C\u6A21\u578B\u6240\u4ED8\u51FA\u7684\u4EE3\u4EF7\u3002</p>'+
-          '<p>\u5728 AI Native \u65F6\u4EE3\uFF0C\u8FD9\u4E2A\u5171\u4EAB\u6A21\u578B\u662F\u5E73\u7B49\u5E73\u6743\u7684\u3002\u4EBA\u4EBA\u90FD\u5E94\u8BE5\u5148\u8BA4\u771F\u9605\u8BFB Agent \u7684\u4EA7\u51FA\uFF0C\u518D\u8003\u8651\u8981\u4E0D\u8981\u5236\u9020\u6C9F\u901A\u4E0E\u534F\u4F5C\u7684\u6210\u672C\u3002</p>'+
-          '<h4>\u7559\u4E0B\u6765\u7684</h4>'+
+          '<p>“没有协作才是最好的协作”听起来像单打独斗的幻想。实则不是。</p>'+
+          '<p>大多数所谓的团队协作，其实不是协作，而是<em>浪费</em>——周会，FYI，交接、“快速同步一下”……这些东西存在，是因为有些人还工作在上一个时代。这笔开销，是不同时代的人们要共享同一个世界模型所付出的代价。</p>'+
+          '<p>在 AI Native 时代，这个共享模型是平等平权的。人人都应该先认真阅读 Agent 的产出，再考虑要不要制造沟通与协作的成本。</p>'+
+          '<h4>留下来的</h4>'+
           '<ul>'+
-            '<li><strong>\u4E00\u8D77\u505A\u51B3\u7B56</strong> \u2014\u2014 \u56E0\u4E3A\u540E\u679C\u662F\u5171\u62C5\u7684\u3002</li>'+
-            '<li><strong>\u4E00\u8D77\u78B0\u649E\u54C1\u5473</strong> \u2014\u2014 \u56E0\u4E3A\u5BA1\u7F8E\u7684\u51FA\u53E3\u53EA\u6709\u4E00\u4E2A\u3002</li>'+
-            '<li><strong>\u4E00\u8D77\u5EFA\u7ACB\u4FE1\u4EFB</strong> \u2014\u2014 \u56E0\u4E3A\u6CA1\u6709 Agent \u80FD\u66FF\u4F60\u80CC\u4E66\u3002</li>'+
+            '<li><strong>一起做决策</strong> —— 因为后果是共担的。</li>'+
+            '<li><strong>一起碰撞品味</strong> —— 因为审美的出口只有一个。</li>'+
+            '<li><strong>一起建立信任</strong> —— 因为没有 Agent 能替你背书。</li>'+
           '</ul>'+
-          '<blockquote>\u6B7B\u6389\u7684\uFF1A\u90A3\u4E2A\u53EA\u4E3A\u4E86\u786E\u8BA4\u5927\u5BB6\u65E9\u5C31\u77E5\u9053\u7684\u4E8B\u800C\u5F00\u7684\u4F1A\u3002\u90A3\u4E2A\u56E0\u4E3A\u6CA1\u4EBA\u613F\u610F\u8BFB\u6587\u6863\u800C\u5B58\u5728\u7684\u8BA8\u8BBA\u3002\u90A3\u4E2A\u56E0\u4E3A\u5DE5\u4F5C\u5176\u5B9E\u6CA1\u505A\u5B8C\u800C\u51FA\u73B0\u7684\u4EA4\u63A5\u3002</blockquote>',
+          '<blockquote>死掉的：那个只为了确认大家早就知道的事而开的会。那个因为没人愿意读文档而存在的讨论。那个因为工作其实没做完而出现的交接。</blockquote>',
 
-        's4.title': '\u672A\u77E5\u662F <em>\u9080\u8BF7\u3002</em>',
-        's4.drop': '\u4E0A\u4E2A\u65F6\u4EE3\uFF0C\u672A\u77E5\u8BA9\u4F60\u7126\u8651\u3002\u8FD9\u4E2A\u65F6\u4EE3\uFF0C\u672A\u77E5\u8BE5\u8BA9\u4F60\u5174\u594B\u2014\u2014\u56E0\u4E3A\u5B83\u6807\u51FA\u4E86 AI \u53EF\u4EE5\u548C\u4F60\u4E00\u8D77\u8D70\u8FDB\u53BB\u7684\u5730\u65B9\u3002',
-        's4.pull': '\u6CA1\u89C1\u8FC7\u7684\u4E8B\uFF0C\u5F52\u4F60\u53BB\u770B\u3002',
+        's4.title': '未知是 <em>邀请。</em>',
+        's4.drop': '上个时代，未知让你焦虑。这个时代，未知该让你兴奋——因为它标出了 AI 可以和你一起走进去的地方。',
+        's4.pull': '没见过的事，归你去看。',
+        's4.invite.gloss':
+          '<span class="label">同一个符号，两种态度。</span>'+
+          '在 §I，<code>?</code> 是你欠别人的捷径；'+
+          '在这里，它是一封邀请——还属于你的那片未知。',
 
-        'r5.label': '\u4E3A\u4EC0\u4E48\u672A\u77E5\u662F\u9080\u8BF7',
+        'r5.label': '为什么未知是邀请',
         'r5.body':
-          '<p>\u4E0A\u4E2A\u65F6\u4EE3\uFF0C\u672A\u77E5\u8BA9\u4F60\u7126\u8651\u3002\u8D70\u8FDB\u53BB\u662F\u6602\u8D35\u7684\u2014\u2014\u4F60\u8981\u72EC\u81EA\u6536\u96C6\u4FE1\u606F\u3001\u72EC\u81EA\u8BD5\u9519\u3001\u72EC\u81EA\u627F\u62C5\u505A\u4E0D\u51FA\u6765\u7684\u98CE\u9669\u3002\u6240\u4EE5\u4F60\u7ED5\u5F00\uFF0C\u4F60\u95EE\u4EBA\uFF0C\u4F60\u62D6\u5EF6\u3002</p>'+
-          '<p>\u5728 AI Native \u65F6\u4EE3\uFF0C<em>\u63A2\u7D22</em>\u7684\u6210\u672C\u5DF2\u7ECF\u5F52\u96F6\u3002AI \u53EF\u4EE5\u548C\u4F60\u4E00\u8D77\u8BFB\u7ED3\u6784\u3001\u62C6\u95EE\u9898\u3001\u98DE\u5FEB\u5730\u8BD5\u3002\u672A\u77E5\u4E0D\u518D\u662F\u9ED1\u76D2\u2014\u2014\u800C\u662F\u4F60\u548C Agent \u53EF\u4EE5\u4E00\u8D77\u7167\u4EAE\u7684\u4E00\u7247\u533A\u57DF\u3002<em>\u56F0\u96BE</em>\uFF0C\u53EA\u662F\u672A\u77E5\u5728\u6267\u884C\u5C42\u9762\u7684\u4E00\u79CD\u5F62\u72B6\uFF1A\u4F60\u8FD8\u6CA1\u5230\u8FBE\u7684\u65F6\u5019\uFF0C\u96BE\u50CF\u4E00\u5835\u5899\uFF1B\u4F60\u4E00\u65E6\u8D70\u5728\u8DEF\u4E0A\uFF0C\u96BE\u53EA\u662F\u5730\u5F62\u3002</p>'+
-          '<p>\u6240\u4EE5\uFF0C\u5F53\u4F60\u53D1\u73B0\u4E00\u4EF6\u201C\u6CA1\u4EBA\u505A\u6210\u201D\u7684\u4E8B\uFF0C\u4FE1\u53F7\u5DF2\u7ECF\u53CD\u8F6C\u3002\u90A3\u4E0D\u662F\u8B66\u544A\uFF0C\u662F\u9080\u8BF7\u3002\u4E00\u4E2A AI \u53EF\u4EE5\u5E2E\u4F60\u62B5\u8FBE\u3001\u800C\u522B\u4EBA\u8FD8\u6CA1\u62B5\u8FBE\u7684\u5730\u65B9\u2014\u2014\u5C31\u662F\u4F60\u7684\u673A\u4F1A\u3002\u628A\u4F60\u770B\u89C1\u7684\u4F20\u51FA\u53BB\uFF0C\u522B\u4EBA\u4E5F\u5728\u7B49\u8FD9\u5F20\u5730\u56FE\u3002</p>'+
-          '<h4>\u65B0\u7684\u6761\u4EF6\u53CD\u5C04</h4>'+
+          '<p>上个时代，未知让你焦虑。走进去是昂贵的——你要独自收集信息、独自试错、独自承担做不出来的风险。所以你绕开，你问人，你拖延。</p>'+
+          '<p>在 AI Native 时代，<em>探索</em>的成本已经归零。AI 可以和你一起读结构、拆问题、飞快地试。未知不再是黑盒——而是你和 Agent 可以一起照亮的一片区域。<em>困难</em>，只是未知在执行层面的一种形状：你还没到达的时候，难像一堵墙；你一旦走在路上，难只是地形。</p>'+
+          '<p>所以，当你发现一件“没人做成”的事，信号已经反转。那不是警告，是邀请。一个 AI 可以帮你抵达、而别人还没抵达的地方——就是你的机会。把你看见的传出去，别人也在等这张地图。</p>'+
+          '<h4>新的条件反射</h4>'+
           '<ul>'+
-            '<li><strong>\u770B\u89C1\u672A\u77E5</strong> \u2014\u2014 \u90A3\u662F\u7EDD\u4F73\u7684\u673A\u4F1A\u3002</li>'+
-            '<li><strong>\u8D70\u8FDB\u53BB</strong> \u2014\u2014 \u4F60\u6709 Agent \u4F5C\u4F34\u3002</li>'+
-            '<li><strong>\u4F20\u51FA\u53BB</strong> \u2014\u2014 \u4F60\u770B\u89C1\u7684\uFF0C\u6B63\u662F\u522B\u4EBA\u60F3\u770B\u89C1\u7684\u3002</li>'+
+            '<li><strong>看见未知</strong> —— 那是绝佳的机会。</li>'+
+            '<li><strong>走进去</strong> —— 你有 Agent 作伴。</li>'+
+            '<li><strong>传出去</strong> —— 你看见的，正是别人想看见的。</li>'+
           '</ul>'+
-          '<blockquote>\u672A\u77E5\u4E0D\u662F\u5A01\u80C1\u3002\u672A\u77E5\u662F\u8FD8\u6CA1\u4EBA\u8D70\u8FC7\u53BB\u7684\u8DEF\u3002</blockquote>',
+          '<blockquote>未知不是威胁。未知是还没人走过去的路。</blockquote>',
 
-        'coda.line1': '\u751F\u6210\uFF0C<br>\u4EA4\u7ED9 Agent\u3002',
-        'coda.line2': '<em>\u51B3\u7B56</em>\u3001<em>\u6743\u9650</em>\u3001<em>\u54C1\u5473</em>\uFF0C<br>\u7559\u7ED9\u4F60\u3002',
-        'coda.coda': '\u6CE8\u610F\u529B\uFF0C<br>\u7559\u7ED9\u66F4\u5B9D\u8D35\u7684\u4E8B\u3002',
+        's5.title': '以 <em>产物</em> 领导。',
+        's5.col1.label': '旧',
+        's5.col1.title': '对齐 <em>人。</em>',
+        's5.col1.body': '头衔、会议、听众。你能影响的边界，是会坐进会议室的人。',
+        's5.col2.label': '新',
+        's5.col2.title': '对齐 <em>物。</em>',
+        's5.col2.body': '每个人都是一个 AI Native 团队，规模和方向你说了算。',
 
-        'foot.left': '\u6765\u81EA Bojun \u7684\u4E00\u70B9\u8BDD\u3002',
-        'foot.right': '\u00A9 \u00A0\u81EA\u7531\u4F7F\u7528\u3002'
+        'r6.label': '为什么人人都在领导',
+        'r6.body':
+          '<p>旧时代，影响力需要头衔与听众。你要先与人对齐，事情才能推动。你能影响的边界，就是会坐进你那间会议室的人的边界。</p>'+
+          '<p>AI 时代，这个边界比你想象的宽得多。每个人都可以领导一个 Agent 团队。你不需要授权、人头、对齐。你只需要去做，用结果反哺你的影响力。</p>'+
+          '<h4>转变</h4>'+
+          '<ul>'+
+            '<li><strong>不要只说想法</strong> —— 那是旧时代的模式。</li>'+
+            '<li><strong>做出产物</strong> —— 让它承载思想。</li>'+
+            '<li><strong>让它流动</strong> —— 对的人会找到它。</li>'+
+          '</ul>'+
+          '<blockquote>你身处一个比你想象更宽的边界里，每个人都在影响，在领导。展示，而非对齐。</blockquote>',
+
+        'coda.line1': '生成，<br>交给 Agent。',
+        'coda.line2': '<em>决策</em>、<em>权限</em>、<em>品味</em>，<br>留给你。',
+        'coda.coda': '注意力，<br>留给更宝贵的事。',
+
+        'foot.left': '来自 Bojun 的一点话。',
+        'foot.right': '©  自由使用。'
       }
     };
 
