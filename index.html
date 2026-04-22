@@ -619,6 +619,57 @@
     .reasoning .collapsible,
     .reasoning .body-inner { transition: none; }
   }
+
+  /* ---------- §IV door (faded ? as doorway) ---------- */
+  .door {
+    margin: clamp(56px, 8vw, 110px) auto clamp(32px, 5vw, 64px);
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: clamp(28px, 4vw, 56px);
+    padding-top: clamp(28px, 4vw, 56px);
+    border-top: 1px solid var(--rule);
+  }
+  .door-svg {
+    width: clamp(140px, 18vw, 220px);
+    height: auto;
+    color: var(--ink);
+    opacity: 0.32;
+  }
+  .door-svg text { opacity: 0.55; }
+  .door-caption {
+    font-family: var(--serif);
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 38ch;
+    margin: 0;
+  }
+  .door-caption .label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+  }
+  .door-caption code {
+    font-family: var(--mono, ui-monospace, monospace);
+    font-size: 0.92em;
+    color: var(--ink);
+  }
+  @media (max-width: 720px) {
+    .door {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+      gap: 18px;
+    }
+    .door-caption { max-width: none; }
+    .door-svg { width: clamp(140px, 44vw, 200px); }
+  }
 </style>
 </head>
 <body>
@@ -819,6 +870,25 @@
       </div>
     </div>
 
+    <figure class="door reveal" aria-hidden="true">
+      <svg class="door-svg" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- door frame -->
+        <path d="M 30 310 L 30 40 Q 30 20 50 20 L 150 20 Q 170 20 170 40 L 170 310"
+              fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
+        <!-- threshold -->
+        <line x1="20" y1="310" x2="180" y2="310" stroke="currentColor" stroke-width="1.2"/>
+        <!-- question mark, centered inside frame -->
+        <text x="100" y="200" text-anchor="middle"
+              font-family="'EB Garamond', Georgia, serif"
+              font-size="150" font-weight="300" fill="currentColor">?</text>
+      </svg>
+      <figcaption class="door-caption" data-i18n="s4.door">
+        <span class="label">The same mark, a different door.</span>
+        In §I, <code>?</code> was a shortcut you owed someone.
+        Here, it&rsquo;s the doorway &mdash; step through.
+      </figcaption>
+    </figure>
+
     <div class="reasoning reveal">
       <div class="label-row" data-i18n="r5.label">Why the unknown is an invitation</div>
       <div class="collapsible"><div class="body-wrap"><div class="body-inner" data-i18n="r5.body">
@@ -1018,6 +1088,10 @@
         's4.title': 'Unknowns are <em>invitations.</em>',
         's4.drop': 'In the last era, the unknown made you anxious. In this one, it should make you excited \u2014 because it marks the territory AI can walk into with you.',
         's4.pull': 'What you haven\u2019t seen is yours to explore.',
+        's4.door':
+          '<span class="label">The same mark, a different door.</span>'+
+          'In §I, <code>?</code> was a shortcut you owed someone. '+
+          'Here, it\u2019s the doorway — step through.',
 
         'r5.label': 'Why the unknown is an invitation',
         'r5.body':
@@ -1114,6 +1188,10 @@
         's4.title': '\u672A\u77E5\u662F <em>\u9080\u8BF7\u3002</em>',
         's4.drop': '\u4E0A\u4E2A\u65F6\u4EE3\uFF0C\u672A\u77E5\u8BA9\u4F60\u7126\u8651\u3002\u8FD9\u4E2A\u65F6\u4EE3\uFF0C\u672A\u77E5\u8BE5\u8BA9\u4F60\u5174\u594B\u2014\u2014\u56E0\u4E3A\u5B83\u6807\u51FA\u4E86 AI \u53EF\u4EE5\u548C\u4F60\u4E00\u8D77\u8D70\u8FDB\u53BB\u7684\u5730\u65B9\u3002',
         's4.pull': '\u6CA1\u89C1\u8FC7\u7684\u4E8B\uFF0C\u5F52\u4F60\u53BB\u770B\u3002',
+        's4.door':
+          '<span class="label">\u540C\u4E00\u4E2A\u7B26\u53F7\uFF0C\u53E6\u4E00\u6247\u95E8\u3002</span>'+
+          '\u5728 §I\uFF0C<code>?</code> \u662F\u4F60\u6B20\u522B\u4EBA\u7684\u6377\u5F84\uFF1B'+
+          '\u5728\u8FD9\u91CC\uFF0C\u5B83\u662F\u95E8\u2014\u2014\u8DE8\u8FC7\u53BB\u3002',
 
         'r5.label': '\u4E3A\u4EC0\u4E48\u672A\u77E5\u662F\u9080\u8BF7',
         'r5.body':
