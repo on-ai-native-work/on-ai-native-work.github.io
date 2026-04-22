@@ -352,43 +352,35 @@
   .coda {
     background: var(--ink);
     color: var(--paper);
-    padding: clamp(96px, 14vw, 200px) 0 clamp(72px, 10vw, 140px);
-    margin-top: clamp(48px, 7vw, 96px);
+    min-height: 100vh;
+    padding: clamp(360px, 60vh, 720px) 0 clamp(220px, 30vh, 380px);
+    margin-top: 0;
+    box-sizing: border-box;
   }
   .coda-inner {
     max-width: none;
+    text-align: center;
   }
-  .coda-line {
+  .coda-question {
     font-family: var(--serif);
+    font-style: italic;
     font-weight: 300;
-    font-size: clamp(30px, 4.6vw, 64px);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    font-size: clamp(28px, 4vw, 52px);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--paper);
     margin: 0;
+    max-width: 22ch;
+    margin-left: auto;
+    margin-right: auto;
     font-variation-settings: "opsz" 144;
   }
-  .coda-line + .coda-line { margin-top: 0.4em; }
-  .coda-line--accent {
-    color: var(--paper);
-  }
-  .coda-line--accent em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--paper);
-  }
-  .coda-line:not(.coda-line--accent) {
-    color: rgba(246,244,239,0.55);
-  }
-  .coda-coda {
-    margin: clamp(40px, 5vw, 72px) 0 0;
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(16px, 1.3vw, 20px);
-    line-height: 1.55;
-    letter-spacing: 0.01em;
-    color: rgba(246,244,239,0.55);
-    max-width: 34ch;
+  .coda-ellipsis {
+    display: inline-block;
+    margin-top: 0.5em;
+    letter-spacing: 0.4em;
+    color: rgba(246,244,239,0.45);
+    font-style: normal;
   }
 
   /* ---------- End / footnote (inverted, merged with coda) ---------- */
@@ -513,7 +505,7 @@
   html[lang="zh"] h1.display,
   html[lang="zh"] .section-title,
   html[lang="zh"] .triptych .phrase,
-  html[lang="zh"] .coda-line {
+  html[lang="zh"] .coda-question {
     letter-spacing: 0;
   }
   html[lang="zh"] .footnote {
@@ -522,11 +514,8 @@
   html[lang="zh"] .coda-inner {
     max-width: none;
   }
-  html[lang="zh"] .coda-line {
-    font-size: clamp(22px, 6vw, 48px);
-  }
-  html[lang="zh"] .coda-coda {
-    font-size: clamp(14px, 2.8vw, 18px);
+  html[lang="zh"] .coda-question {
+    font-size: clamp(22px, 5vw, 44px);
   }
 
   /* ---------- Reasoning (scroll-revealed) ---------- */
@@ -712,33 +701,6 @@
     .lead-grid { grid-template-columns: 1fr; }
     .lead-col { border-right: 0; border-bottom: 1px solid var(--rule); }
     .lead-col:last-child { border-bottom: 0; }
-  }
-
-  /* ---------- §VI koan (open question + whitespace) ---------- */
-  .vi-koan {
-    margin: clamp(56px, 9vw, 120px) 0 0;
-    text-align: center;
-  }
-  .vi-question {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(22px, 2.6vw, 34px);
-    line-height: 1.35;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-    max-width: 28ch;
-    margin: 0 auto;
-  }
-  .vi-space {
-    height: clamp(160px, 28vh, 320px);
-  }
-  .vi-ellipsis {
-    display: inline-block;
-    margin-top: 0.4em;
-    color: var(--ink-mute, #999);
-    letter-spacing: 0.4em;
-    opacity: 0.55;
   }
 </style>
 </head>
@@ -1043,24 +1005,15 @@
 </section>
 
 <!-- ============ §VI ============ -->
-<section class="article">
-  <div class="wrap">
-    <div class="vi-koan reveal">
-      <p class="vi-question" data-i18n="s6.q">
-        So, what is left for you?<br><span class="vi-ellipsis">…</span>
-      </p>
-      <div class="vi-space" aria-hidden="true"></div>
-    </div>
-  </div>
-</section>
+<!-- (moved into CODA black canvas) -->
 
-<!-- ============ CODA ============ -->
+<!-- ============ CODA fade + question ============ -->
 <section class="coda">
   <div class="wrap">
     <div class="coda-inner reveal">
-      <p class="coda-line" data-i18n="coda.line1">Generation,<br>to agent.</p>
-      <p class="coda-line coda-line--accent" data-i18n="coda.line2"><em>Decisions</em>, <em>permission</em>, <em>taste</em>,<br>to you.</p>
-      <p class="coda-coda" data-i18n="coda.coda">Attention,<br>to what's still precious.</p>
+      <p class="coda-question" data-i18n="coda.question">
+        So, what is left for you?<br><span class="coda-ellipsis">…</span>
+      </p>
     </div>
   </div>
 </section>
@@ -1286,11 +1239,7 @@
           '<p>Your influence is no longer bounded by your title. It is bounded by what you dare to make — and put in front of people.</p>'+
           '<blockquote>Title gets you into the room. The artifact moves the room.</blockquote>',
 
-        's6.q': 'So, what is left for you?<br><span class="vi-ellipsis">…</span>',
-
-        'coda.line1': 'Generation,<br>to agent.',
-        'coda.line2': '<em>Decisions</em>, <em>permission</em>, <em>taste</em>,<br>to you.',
-        'coda.coda': 'Attention,<br>to what’s still precious.',
+        'coda.question': 'So, what is left for you?<br><span class="coda-ellipsis">…</span>',
 
         'foot.left': 'A few words from Bojun.',
         'foot.right': '©  Use freely.'
@@ -1420,11 +1369,7 @@
           '<p>你的影响力不再被你的职位框住。你只需<em>敢想敢做</em>、并放到别人面前，让结果反哺你的影响力</p>'+
           '<blockquote>你的影响力，由你自己决定。</blockquote>',
 
-        's6.q': '那么，留给你的是什么？<br><span class="vi-ellipsis">…</span>',
-
-        'coda.line1': '生成，<br>交给 Agent。',
-        'coda.line2': '<em>决策</em>、<em>权限</em>、<em>品味</em>，<br>留给你。',
-        'coda.coda': '注意力，<br>留给更宝贵的事。',
+        'coda.question': '那么，留给你的是什么？<br><span class="coda-ellipsis">…</span>',
 
         'foot.left': '来自 Bojun 的一点话。',
         'foot.right': '©  自由使用。'
