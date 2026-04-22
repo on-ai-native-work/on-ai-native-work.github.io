@@ -733,6 +733,13 @@
   .vi-space {
     height: clamp(160px, 28vh, 320px);
   }
+  .vi-ellipsis {
+    display: inline-block;
+    margin-top: 0.4em;
+    color: var(--ink-mute, #999);
+    letter-spacing: 0.4em;
+    opacity: 0.55;
+  }
 </style>
 </head>
 <body>
@@ -1040,7 +1047,7 @@
   <div class="wrap">
     <div class="vi-koan reveal">
       <p class="vi-question" data-i18n="s6.q">
-        What remains, when the doing is no longer yours?
+        So, what is left for you?<br><span class="vi-ellipsis">…</span>
       </p>
       <div class="vi-space" aria-hidden="true"></div>
     </div>
@@ -1279,7 +1286,7 @@
           '<p>Your influence is no longer bounded by your title. It is bounded by what you dare to make — and put in front of people.</p>'+
           '<blockquote>Title gets you into the room. The artifact moves the room.</blockquote>',
 
-        's6.q': 'What remains, when the doing is no longer yours?',
+        's6.q': 'So, what is left for you?<br><span class="vi-ellipsis">…</span>',
 
         'coda.line1': 'Generation,<br>to agent.',
         'coda.line2': '<em>Decisions</em>, <em>permission</em>, <em>taste</em>,<br>to you.',
@@ -1413,7 +1420,7 @@
           '<p>你的影响力不再被你的职位框住。你只需<em>敢想敢做</em>、并放到别人面前，让结果反哺你的影响力</p>'+
           '<blockquote>你的影响力，由你自己决定。</blockquote>',
 
-        's6.q': '当劳作不再属于你，什么还属于你？',
+        's6.q': '那么，留给你的是什么？<br><span class="vi-ellipsis">…</span>',
 
         'coda.line1': '生成，<br>交给 Agent。',
         'coda.line2': '<em>决策</em>、<em>权限</em>、<em>品味</em>，<br>留给你。',
