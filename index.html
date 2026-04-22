@@ -905,6 +905,71 @@
   </div>
 </section>
 
+<div class="wrap"><hr class="rule" /></div>
+
+<!-- ============ §V ============ -->
+<section class="article">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="s5.title">
+        Lead with <em>artifacts.</em>
+      </h2>
+    </div>
+
+    <div class="cols reveal">
+      <div class="body">
+        <p class="drop" data-i18n="s5.drop">
+          Don&rsquo;t lead with intent, status, or opinion.
+          Lead with the thing itself &mdash; the PR, the prototype, the dataset, the eval.
+          The artifact is the conversation.
+        </p>
+        <p class="pull" data-i18n="s5.pull">
+          If it isn&rsquo;t shipped, it isn&rsquo;t real.
+        </p>
+      </div>
+    </div>
+
+    <div class="lead-grid reveal" aria-label="Old habits vs new defaults">
+      <div class="lead-col lead-old">
+        <div class="lead-tag" data-i18n="s5.old.tag">Yesterday</div>
+        <ul data-i18n="s5.old.list">
+          <li>A meeting to align.</li>
+          <li>A doc describing what we&rsquo;ll build.</li>
+          <li>A status update.</li>
+          <li>An opinion in a thread.</li>
+          <li>A deck to get buy-in.</li>
+        </ul>
+      </div>
+      <div class="lead-col lead-new">
+        <div class="lead-tag" data-i18n="s5.new.tag">Today</div>
+        <ul data-i18n="s5.new.list">
+          <li>A PR that runs.</li>
+          <li>A prototype you can click.</li>
+          <li>A dataset and an eval result.</li>
+          <li>A diff with a one-line note.</li>
+          <li>A working thing, shared.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reasoning reveal">
+      <div class="label-row" data-i18n="r6.label">Why artifacts, not intent</div>
+      <div class="collapsible"><div class="body-wrap"><div class="body-inner" data-i18n="r6.body">
+        <p>In the previous era, building was expensive, so we negotiated <em>before</em> building &mdash; meetings, docs, decks, alignment. The talk was cheap relative to the work.</p>
+        <p>In the AI native era, the ratio has flipped. Generating a working draft is cheaper than describing one. A prototype is faster than a spec. A PR is clearer than a paragraph. The talk is now the expensive part &mdash; because it consumes the one resource the agent can&rsquo;t make for you: <strong>other people&rsquo;s attention</strong>.</p>
+        <h4>The new default</h4>
+        <ul>
+          <li><strong>Ship a draft</strong> &mdash; even rough. The artifact pins the conversation to something real.</li>
+          <li><strong>Show, don&rsquo;t pitch</strong> &mdash; the working thing is its own argument.</li>
+          <li><strong>Iterate in public</strong> &mdash; the diff is the discussion.</li>
+        </ul>
+        <p>This is not &ldquo;move fast and break things.&rdquo; It is the opposite: when artifacts are cheap, the only honest unit of progress is <em>a working thing</em>. Everything upstream of that &mdash; intent, plan, opinion &mdash; is provisional.</p>
+        <blockquote>Talk is no longer cheap. The artifact is.</blockquote>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CODA ============ -->
 <section class="coda">
   <div class="wrap">
@@ -1203,6 +1268,39 @@
             '<li><strong>传出去</strong> —— 你看见的，正是别人想看见的。</li>'+
           '</ul>'+
           '<blockquote>未知不是威胁。未知是还没人走过去的路。</blockquote>',
+
+        's5.title': '以<em>产物</em>领导。',
+        's5.drop':
+          '别用意图、进度、或观点来开场。'+
+          '把那个东西本身亮出来——PR、原型、数据集、评测结果。'+
+          '产物本身就是这场对话。',
+        's5.pull': '没交付出来，就不算真存在。',
+        's5.old.tag': '从前',
+        's5.old.list':
+          '<li>开个会对齐一下。</li>'+
+          '<li>写个文档说明要做什么。</li>'+
+          '<li>同步一下进度。</li>'+
+          '<li>在群里发表一下看法。</li>'+
+          '<li>做套 deck 拉支持。</li>',
+        's5.new.tag': '现在',
+        's5.new.list':
+          '<li>一个能跑的 PR。</li>'+
+          '<li>一个能点的原型。</li>'+
+          '<li>一个数据集，加一份评测结果。</li>'+
+          '<li>一段 diff，附一行说明。</li>'+
+          '<li>一个能用的东西，传出去。</li>',
+        'r6.label': '为什么是产物，不是意图',
+        'r6.body':
+          '<p>上个时代，建造昂贵，所以我们在<em>动手之前</em>谈判——开会、写文档、做 deck、对齐。相对于工作本身，说话很便宜。</p>'+
+          '<p>在 AI Native 时代，比例反过来了。生成一份能跑的草稿，比描述它便宜。原型比规格快。PR 比一段话清楚。说话才是贵的那一边——因为它消耗的是 Agent 唯一替你造不出来的东西：<strong>别人的注意力</strong>。</p>'+
+          '<h4>新的默认</h4>'+
+          '<ul>'+
+            '<li><strong>先发草稿</strong> —— 哪怕粗糙。产物把对话钉在一个真实的东西上。</li>'+
+            '<li><strong>给看，不要推销</strong> —— 能跑的东西本身就是论据。</li>'+
+            '<li><strong>在公开里迭代</strong> —— diff 就是讨论。</li>'+
+          '</ul>'+
+          '<p>这不是 "move fast and break things"。恰好相反：当产物变得便宜，进展唯一诚实的单位就是<em>一个能用的东西</em>。它上游的一切——意图、计划、观点——都只是临时的。</p>'+
+          '<blockquote>说话不再便宜。产物才是。</blockquote>',
 
         'coda.line1': '生成，<br>交给 Agent。',
         'coda.line2': '<em>决策</em>、<em>权限</em>、<em>品味</em>，<br>留给你。',
