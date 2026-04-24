@@ -702,6 +702,27 @@
     .lead-col { border-right: 0; border-bottom: 1px solid var(--rule); }
     .lead-col:last-child { border-bottom: 0; }
   }
+
+  /* ---------- §VI brake block (the reflexive turn) ---------- */
+  .s6-brake {
+    margin: clamp(36px, 5vw, 64px) 0;
+    padding: clamp(20px, 3vw, 32px) 0 clamp(20px, 3vw, 32px) clamp(18px, 2.4vw, 28px);
+    border-left: 2px solid var(--ink);
+  }
+  .s6-brake p { margin: 0 0 0.7em; }
+  .s6-brake p:last-child { margin-bottom: 0; }
+  .s6-brake-lead {
+    font-style: italic;
+    color: rgba(28,26,24,0.6);
+    margin-bottom: 0.5em !important;
+  }
+  .s6-brake-q {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    margin-bottom: 0.9em !important;
+  }
 </style>
 </head>
 <body>
@@ -1005,7 +1026,57 @@
 </section>
 
 <!-- ============ §VI ============ -->
-<!-- (moved into CODA black canvas) -->
+<div class="wrap"><hr class="rule" /></div>
+
+<section class="article">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="section-title" data-i18n="s6.title">
+        Skin in to <em>believe.</em>
+      </h2>
+    </div>
+
+    <div class="cols reveal">
+      <div class="body">
+        <p class="drop" data-i18n="s6.drop">
+          <strong>AI Native is proven by what you yourself ran, broke, and rewrote.</strong>
+          Not by anyone&rsquo;s prophecy. Not by the noise around you.
+        </p>
+
+        <p data-i18n="s6.body1">
+          Everyone is talking about AI Native now.
+          Few have actually used it, broken it, been embarrassed by it.
+          Belief from hearing is the lightest kind.
+          Belief after skin in the game is yours.
+        </p>
+        <p data-i18n="s6.body2">
+          The reverse holds too: dismissing without trying, and evangelizing without trying, are the same posture &mdash;
+          <strong>both let someone else&rsquo;s experience stand in for their own judgment.</strong>
+        </p>
+
+        <div class="s6-brake" data-i18n="s6.brake">
+          <p class="s6-brake-lead"><em>&hellip;and yet,</em></p>
+          <p class="s6-brake-q"><strong>You think you&rsquo;re in. But are you really in?</strong></p>
+          <p>Using the tools a few times doesn&rsquo;t count. Reading the papers doesn&rsquo;t count.</p>
+          <p>Skin in is a felt thing &mdash; what&rsquo;s left in your body after it has embarrassed you, after it has forced you to change how you work.</p>
+          <p>No one else knows. You do.</p>
+        </div>
+
+        <p data-i18n="s6.coda1">
+          You can also choose not to believe. That&rsquo;s fine.
+        </p>
+        <p data-i18n="s6.coda2">
+          But be clear: this isn&rsquo;t a position. It&rsquo;s a bet.
+          A bet on what kind of work future-you does, how, and with whom.
+        </p>
+
+        <p class="pull" data-i18n="s6.pull">
+          Skin in, then choose.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ CODA fade + question ============ -->
 <section class="coda">
@@ -1239,6 +1310,30 @@
           '<p>Your influence is no longer bounded by your title. It is bounded by what you dare to make — and put in front of people.</p>'+
           '<blockquote>Title gets you into the room. The artifact moves the room.</blockquote>',
 
+        's6.title': 'Skin in to <em>believe.</em>',
+        's6.drop':
+          '<strong>AI Native is proven by what you yourself ran, broke, and rewrote.</strong> '+
+          'Not by anyone’s prophecy. Not by the noise around you.',
+        's6.body1':
+          'Everyone is talking about AI Native now. '+
+          'Few have actually used it, broken it, been embarrassed by it. '+
+          'Belief from hearing is the lightest kind. '+
+          'Belief after skin in the game is yours.',
+        's6.body2':
+          'The reverse holds too: dismissing without trying, and evangelizing without trying, are the same posture — '+
+          '<strong>both let someone else’s experience stand in for their own judgment.</strong>',
+        's6.brake':
+          '<p class="s6-brake-lead"><em>…and yet,</em></p>'+
+          '<p class="s6-brake-q"><strong>You think you’re in. But are you really in?</strong></p>'+
+          '<p>Using the tools a few times doesn’t count. Reading the papers doesn’t count.</p>'+
+          '<p>Skin in is a felt thing — what’s left in your body after it has embarrassed you, after it has forced you to change how you work.</p>'+
+          '<p>No one else knows. You do.</p>',
+        's6.coda1': 'You can also choose not to believe. That’s fine.',
+        's6.coda2':
+          'But be clear: this isn’t a position. It’s a bet. '+
+          'A bet on what kind of work future-you does, how, and with whom.',
+        's6.pull': 'Skin in, then choose.',
+
         'coda.question': 'So, what is left for you?<br><span class="coda-ellipsis">…</span>',
 
         'foot.left': 'A few words from Bojun.',
@@ -1368,6 +1463,27 @@
           '<p>这不是乌托邦——旧杠杆仍然在它该用的地方有效（决策、权限、真正的信任）。但门槛被抬起来了。任何能交付一件能用东西的人，都拥有了过去需要一张组织架构图才能换来的影响力半径。</p>'+
           '<p>你的影响力不再被你的职位框住。你只需<em>敢想敢做</em>、并放到别人面前，让结果反哺你的影响力</p>'+
           '<blockquote>你的影响力，由你自己决定。</blockquote>',
+
+        's6.title': '做了才<em>信。</em>',
+        's6.drop':
+          '<strong>AI Native，不靠谁的预言，也不靠满世界的鼓吹。',
+        's6.body1':
+          '现在所有人都在谈论它。真正用过、改过、被它打过脸的，是少数。'+
+          '听见就跟风，这不是相信。躬身入局之后的选择，才是相信。',
+        's6.body2':
+          '反过来也一样：没下水就唱衰的，和没下水就鼓吹的，是同一种姿态——'+
+          '<strong>他们都在用别人的体感，代替自己的判断。</strong>',
+        's6.brake':
+          '<p class="s6-brake-lead"><em>……不过，</em></p>'+
+          '<p class="s6-brake-q"><strong>你以为你入局了。但你真的入局了吗？</strong></p>'+
+          '<p>工具用过几次不算入局。读过几篇 paper 不算入局。</p>'+
+          '<p>入局是一种体感——是你经历过被AI震撼的那个瞬间，真正改变了工作模式之后，留在身体里的那个东西。</p>'+
+          '<p>别人不知道。你自己知道。</p>',
+        's6.coda1': '你也可以选择不信。这没问题。',
+        's6.coda2':
+          '但要清楚：这不是一个观点，是一场赌。'+
+          '你赌的是未来的你做什么样的工作、怎么工作、和谁。',
+        's6.pull': '躬身入局，再做出选择。',
 
         'coda.question': '那么，留给你的是什么？<br><span class="coda-ellipsis">…</span>',
 
